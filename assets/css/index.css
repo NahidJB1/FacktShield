@@ -1,0 +1,261 @@
+/* --- HERO SECTION --- */
+.hero-section {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* The subtle cyan glow behind the text from your design */
+.hero-background-glow {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 180, 216, 0.15) 0%, rgba(10, 13, 20, 0) 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.badge-outline {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.text-cyan {
+    color: var(--accent-cyan);
+}
+
+.hero-subtitle {
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 48px;
+    font-size: 1.1rem;
+}
+
+/* --- ANALYSIS INPUT BOX --- */
+.analysis-container {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 32px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.input-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-cyan);
+    background-color: rgba(0, 180, 216, 0.05);
+}
+
+.input-wrapper {
+    margin-bottom: 24px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 18px 24px;
+    border-radius: 12px;
+    background-color: #e2e8f0; /* The light grey from the Figma design */
+    border: none;
+    font-size: 1rem;
+    color: #0f172a;
+    outline: none;
+    transition: box-shadow var(--transition-fast);
+}
+
+.input-wrapper input:focus {
+    box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.3);
+}
+
+/* --- HOW IT WORKS SECTION --- */
+.how-it-works-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.section-headers {
+    margin-bottom: 60px;
+}
+
+.subtitle-small {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.title-large {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.step-card {
+    background-color: var(--bg-card);
+    padding: 40px 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.step-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.step-icon-wrapper {
+    margin-bottom: 24px;
+}
+
+.step-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.step-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* --- STATS SECTION --- */
+.stats-section {
+    max-width: 1100px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+}
+
+.stat-item {
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.border-left-right {
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.dot-cyan { background-color: var(--accent-cyan); }
+.dot-red { background-color: var(--accent-red); }
+.dot-green { background-color: var(--accent-green); }
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 12px 0 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* --- MOBILE RESPONSIVENESS (Crucial for UI UX) --- */
+@media (max-width: 900px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .steps-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .border-left-right {
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+}
+
+@media (max-width: 600px) {
+    .input-tabs {
+        flex-direction: column;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .analysis-container {
+        padding: 20px;
+    }
+}
