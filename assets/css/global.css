@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Color Palette derived from Figma */
+    --bg-main: #0a0d14;         /* Deep dark background */
+    --bg-card: #121620;         /* Slightly lighter card background */
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+    --accent-cyan: #00B4D8;     /* The main button and highlight color */
+    --accent-cyan-hover: #0096b4;
+    --accent-red: #ef4444;      /* Fake news indicator */
+    --accent-green: #22c55e;    /* Verified indicator */
+    
+    /* Animation Timings */
+    --transition-fast: 0.2s ease-in-out;
+    --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Global Button Styles */
+.btn-primary {
+    background-color: var(--accent-cyan);
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-cyan-hover);
+    transform: translateY(-2px);
+}
